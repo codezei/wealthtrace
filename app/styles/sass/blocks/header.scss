@@ -1,0 +1,173 @@
+.header {
+    padding: 2rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #E3EFD1;
+    z-index: 12;
+    &__logo {
+        flex-shrink: 0;
+        margin-right: 100px;
+
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .menu {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            a {
+                padding: 1rem;
+            }
+        }
+        &-btn {
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+
+        &-btn-menu {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 1399px ) {
+        &__logo {
+            margin-right: 50px;
+        }
+    }
+
+    @media screen and (max-width: 1199px) {
+        &__logo {
+            order: 1;
+        }
+        &__inner {
+            flex-wrap: wrap;
+            position: relative;
+        }
+        
+        &__navigation {
+
+            display: none;
+            order: 3;
+            width: 100%;
+            // justify-content: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+            &.active {
+                display: flex;
+            }
+            
+            &-btn-menu {
+                display: inline-block;
+                border: none;
+                outline: none;
+                width: 25px;
+                height: 20px;
+                background: transparent;
+                position: relative;
+                order: 2;
+                span {
+                    width: 100%;
+                    height: 2px;
+                    background: #18191A;
+                    position: absolute;
+                    left: 0;
+                    pointer-events: none;
+                    transition: all 400ms;
+                    border-radius: 1px;
+                    &:nth-child(1) {
+                        top: 0;
+                    }
+                    &:nth-child(2) {
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    &:nth-child(3) {
+                        bottom: 0;
+                    }
+                }
+                &.active {
+                    span {
+                        &:nth-child(1) {
+                            transform: rotate(45deg);
+                            transform-origin: left;
+                        }
+                        &:nth-child(2) {
+                            transform: translateY(-50%) translateX(-100%);
+                            width: 0;
+                        }
+                        &:nth-child(3) {
+                            transform: rotate(-45deg);
+                            transform-origin: left;
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+    @media screen and (max-width: 1199px) and (min-width: 992px) {
+        &__navigation {
+            &-btn-menu {
+                &:hover {
+                    span {
+                        &:nth-child(2) {
+                            transform: translateY(-50%) translateX(-50%);
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+    }
+    @media screen and (max-width: 991px) {
+        &__navigation {
+            flex-wrap: wrap;
+            &-main {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &__navigation {
+            flex-direction: column;
+            align-items: flex-start;
+            .menu {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    .current-menu-item a {
+        font-weight: 700;
+        opacity: 1;
+    }
+    a {
+        display: inline-block;
+        color: inherit;
+        opacity: 0.6;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

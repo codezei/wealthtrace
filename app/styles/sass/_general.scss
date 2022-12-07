@@ -1,0 +1,100 @@
+// GENERAL PROJECT STYLES
+@media screen and (max-width: 991px) {
+    html {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 767px) {
+    html {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 575px) {
+    html {
+        font-size: 10px;
+    }
+}
+img {
+    max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora';
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.25rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 575px) {
+    h3 {
+        font-size: 17px;
+    }
+}
+.btn {
+    padding: 1rem 2.6rem;
+    background: #A4C31F;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    outline: none;
+    font-weight: 500;
+    transition: all 400ms;
+    display: inline-block;
+    border: 1px solid #A4C31F;
+    line-height: 1.1;
+}
+.btn:hover {
+    background: #81981a;
+    color: #fff;
+    border: 1px solid #81981a;
+}
+
+.btn:active {
+    outline: 1px solid #6a7d15;
+}
+
+.btn--inversion {
+    background: transparent;
+    color: inherit;
+}
+.btn--inversion:hover {
+    background: #81981a;
+    color: #fff;
+    border: 1px solid #81981a;
+}
+
+
+.block {
+    @media screen and (max-width: 1199px) {
+        padding: 80px 0 !important;
+        &:nth-of-type(1) {
+            padding-top: 115px !important
+        }
+    }
+    @media screen and (max-width: 991px) {
+        padding: 40px 0 !important;
+    }
+    @media screen and (max-width: 767px) {
+        padding: 30px 0 !important;
+    }
+    @media screen and (max-width: 575px) {
+        padding: 25px 0 !important;
+    }
+}
+
+.title {
+    @media screen and (max-width: 991px) {
+        margin-bottom: 40px !important;
+    }
+    @media screen and (max-width: 767px) {
+        margin-bottom: 30px !important;
+    }
+}
