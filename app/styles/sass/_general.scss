@@ -65,10 +65,16 @@ h3 {
     background: transparent;
     color: inherit;
 }
-.btn--inversion:hover {
+.btn--inversion:hover, .btn--inversion.active:hover {
     background: #81981a;
     color: #fff;
     border: 1px solid #81981a;
+}
+
+.btn--inversion.active {
+    background: #A4C31F;
+    border: 1px solid #A4C31F;
+    color: #fff;
 }
 
 
@@ -96,5 +102,17 @@ h3 {
     }
     @media screen and (max-width: 767px) {
         margin-bottom: 30px !important;
+    }
+}
+.subtitle {
+    font-size: 20px;
+    @media screen and (max-width: 991px) {
+        font-size: 18px;
+    }
+}
+.logo {
+    max-width: 135px;
+    img {
+        width: 100%;
     }
 }

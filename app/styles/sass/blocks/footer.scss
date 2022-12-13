@@ -4,6 +4,7 @@
     background: #F3F5F0;
     &__logo {
         margin-bottom: 2rem;
+        max-width: 180px;
     }
     &__inner {
         padding-bottom: 50px;
@@ -14,21 +15,22 @@
         flex-wrap: wrap;
     }
     &__info {
-        padding-left: 15px;
-        padding-right: 15px;
+        // padding-left: 15px;
+        // padding-right: 15px;
     }
     &__navigation {
         font-size: 16px;
-        padding-left: 15px;
-        padding-right: 15px;
+        // padding-left: 15px;
+        // padding-right: 15px;
         &-title {
            font-size: 16px;
             margin-bottom: 16px;
         }
+
         .menu {
             .menu-item {
-                :not(:last-child) {
-                    margin-bottom: 8px;
+                &:not(:last-child) {
+                    margin-bottom: 14px;
                 }
             }
             a {
@@ -58,13 +60,23 @@
         }
     }
     @media screen and (min-width: 1200px) {
+        &__navigation {
+            &:not(:last-of-type) {
+                margin-right: 80px;
+            }
+        }
         &__info {
-            margin-right: 100px;
+            margin-right: auto;
         }
     }
     @media screen and (max-width: 1199px) {
         padding-bottom: 60px;
         padding-top: 80px;
+        &__navigation {
+            &:not(:last-of-type) {
+                margin-right: 25px;
+            }
+        }
     }
     @media screen and (max-width: 991px) {
         padding-bottom: 40px;
@@ -97,12 +109,12 @@
         }
         &__navigation {
             margin-top: 25px;
-            width: 33%;
+            // width: 33%;
         }
         &__bottom {
             flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             flex-direction: column;
         }
         &__copyright {
@@ -111,18 +123,18 @@
 
     }
     @media screen and (max-width: 575px) {
-        &__navigation {
-            width: 100%;
-            margin-top: 15px;
-            .menu {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                a {
-                    padding: 5px;
-                }
-            }
-        }
+        // &__navigation {
+        //     width: 100%;
+        //     margin-top: 15px;
+        //     .menu {
+        //         display: flex;
+        //         flex-wrap: wrap;
+        //         justify-content: space-between;
+        //         a {
+        //             padding: 5px;
+        //         }
+        //     }
+        // }
     }
 
 }
