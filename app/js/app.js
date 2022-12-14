@@ -9,7 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	mobMenuToggle ()
 	videoPopup () 
 	stickyHeader ()
-	toggleTutorialContent ()
+	toggleContent ('.tutorial__navigation-btn')
+	toggleContent ('.how-solution__navigation-btn')
+	accordion ('.accordion-item-js', {closeItem: false})
+	accordion ('.report-accordion-item-js', {closeItem: true, closeTarget: 'sample-report__item-title'})
 })
 
 // мобильное меню
@@ -127,8 +130,8 @@ function stickyHeader () {
 }
 
 
-function toggleTutorialContent () {
-	let btns = document.querySelectorAll('.tutorial__navigation-btn')
+function toggleContent (selectorBtn) {
+	let btns = document.querySelectorAll(selectorBtn)
 	let activeContent
 	let activeBtn
 	for(let i = 0; i < btns.length; i++) {
@@ -151,3 +154,37 @@ function toggleTutorialContent () {
 		})
 	}
 }
+
+
+function accordion (accordionItemSelector, mode) {
+	let accordionElements = document.querySelectorAll(accordionItemSelector)
+	let openedElement
+	for(let i = 0; i < accordionElements.length; i++) {
+		
+		if (accordionElements[i].classList.contains('open')) {
+			openedElement = accordionElements[i]
+		}
+		accordionElements[i].addEventListener('click', function (e) {
+			if (mode.closeItem) {
+				if (openedElement && openedElement !== e.currentTarget) {
+
+					openedElement.classList.remove('open')
+				}
+				openedElement = e.currentTarget
+				if (openedElement.classList.contains('open') && e.target.classList.contains(mode.closeTarget)) {
+					openedElement.classList.remove('open')
+				} else {
+					openedElement.classList.add('open')
+				}
+
+			} else {
+				if (openedElement) {
+					openedElement.classList.remove('open')
+				}
+				openedElement = e.currentTarget
+				openedElement.classList.add('open')
+			}
+
+		})
+	}
+}	

@@ -25,6 +25,7 @@
             margin-bottom: 0;
             padding-left: 54px;
             padding-right: 30px;
+            cursor: pointer;
             &:before {
                 content: '';
                 display: block;
@@ -45,10 +46,19 @@
                 right: 0;
                 top: 50%;
                 transform: translateY(-50%);
+                transition: all 400ms;
+                .open & {
+                    transform: translateY(-50%) rotate(90deg);
+                }
             }
         }
         &-content {
             display: none;
+            margin-bottom: 0;
+            .open & {
+                display: block;
+                padding-top: 16px;
+            }
         }
     }
     @media screen and (max-width: 1199px) {

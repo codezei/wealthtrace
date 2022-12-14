@@ -34,7 +34,7 @@
     }
     &__label {
         display: inline-block;
-        font-weight: 700;
+        font-weight: 600;
         margin-bottom: 12px;
         &--red {
             color: red;
@@ -101,6 +101,7 @@
             background-size: 20px;
             border-radius: 50%;
             margin-right: 16px;
+            flex-shrink: 0;
         }
         &--phone:before {
             background-image: url(../images/dist/phone.svg);
@@ -139,6 +140,11 @@
         }
         &-text {
             margin-bottom: 0;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &__item {
+            line-height: 1.3;
         }
     }
 }

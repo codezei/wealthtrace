@@ -12,6 +12,7 @@
     animation-fill-mode: forwards;
     animation-delay: 200ms;
     transform: translateY(-100%);
+    font-family: 'Montserrat';
     &.sticky {
         background: #E3EFD1;
     }
@@ -195,7 +196,7 @@
     padding: 0;
     margin: 0;
     .current-menu-item a {
-        font-weight: 700;
+        font-weight: 600;
         opacity: 1;
     }
     a {
