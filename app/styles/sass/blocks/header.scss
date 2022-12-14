@@ -4,8 +4,14 @@
     top: 0;
     left: 0;
     width: 100%;
-    transition: all 200ms;
+    transition: all 400ms;
     z-index: 12;
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-delay: 200ms;
+    transform: translateY(-100%);
     &.sticky {
         background: #E3EFD1;
     }
@@ -198,3 +204,13 @@
 }
 
 
+@keyframes fadeIn {
+     from {
+        opacity: 0;
+        transform: translateY(-100%);
+     }
+     to {
+        opacity: 1;
+        transform: translateY(0);
+     }
+}

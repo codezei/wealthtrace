@@ -63,6 +63,8 @@
         }
         &__btn {
             color: #809D08;
+            width: 100%;
+            text-align: center;
             .active & {
                 background: #fff;
                 color: #12141D;

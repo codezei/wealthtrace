@@ -80,6 +80,13 @@ function videoPopup () {
 
 function stickyHeader () {
 	let header = document.querySelector('.header')
+
+	if (document.body.getBoundingClientRect().top < 0) {
+		header.classList.add('sticky')
+	} else {
+		header.classList.remove('sticky')
+	}
+	
 	document.addEventListener('scroll', function () {
 		if (document.body.getBoundingClientRect().top < 0) {
 			header.classList.add('sticky')
