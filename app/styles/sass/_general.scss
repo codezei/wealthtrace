@@ -50,6 +50,9 @@ h3 {
     display: inline-block;
     border: 1px solid #A4C31F;
     line-height: 1.1;
+    @media screen and (max-width: 575px) {
+        padding: 15px;
+    }
 }
 .btn:hover {
     background: #81981a;
@@ -115,4 +118,16 @@ h3 {
     img {
         width: 100%;
     }
+}
+.bg {
+    background: linear-gradient(180deg, #E3EFD1 86px, rgba(244, 244, 244, 0.38) 100%);
+}
+.input {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 16px;
+    padding: 16px;
+    resize: none;
 }

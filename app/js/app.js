@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Custom JS
 	testimonialsSlider ()
+	samplePlansSlider ()
 	mobMenuToggle ()
 	videoPopup () 
 	stickyHeader ()
@@ -35,7 +36,7 @@ function testimonialsSlider () {
 			prevEl: ".swiper-button-prev",
 		  },
 		  breakpoints: {
-			320: {
+			280: {
 			  slidesPerView: 1,
 			  spaceBetween: 10,
 			},
@@ -46,6 +47,34 @@ function testimonialsSlider () {
 			992: {
 			  slidesPerView: 3,
 			  spaceBetween: 30,
+			},
+		  }
+      });
+}
+function samplePlansSlider () {
+	var swiper = new Swiper(".sample-plans__slider", {
+		slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+		  clickable: true,
+        },
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		  },
+		  breakpoints: {
+			280: {
+			  slidesPerView: 1,
+			  spaceBetween: 10,
+			},
+			768: {
+			  slidesPerView: 2,
+			  spaceBetween: 20,
+			},
+			992: {
+			  slidesPerView: 3,
+			  spaceBetween: 0,
 			},
 		  }
       });
