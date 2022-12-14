@@ -1,0 +1,22 @@
+.individuals-info {
+    padding: 140px 0;
+    &__subscribe {
+        margin-bottom: 140px;
+    }
+
+    @media screen and (max-width: 1199px) {
+        &__subscribe {
+            margin-bottom: 100px;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &__subscribe {
+            margin-bottom: 60px;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &__subscribe {
+            margin-bottom: 30px;
+        }
+    }
+}

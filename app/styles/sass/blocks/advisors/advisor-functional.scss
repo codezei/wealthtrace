@@ -1,0 +1,31 @@
+.advisors {
+    &-action {
+        color: #fff;
+        text-align: center;
+        background-color: #809D08;
+        border-radius: 16px;
+        padding: 100px 15px 90px;
+        background-image: url(../images/dist/waves.png);
+        background-position: center;
+        background-size: cover;
+        &__inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        &__title {
+            margin-bottom: 2rem;
+        }
+        &__subtitle {
+            margin-bottom: 3rem;
+            opacity: 0.8;
+        }
+        @media screen and (max-width: 575px) {
+            background-image: url(../images/dist/waves-mob.png);
+            padding: 4rem 2rem;
+        }
+    }
+}
+
+.functional--advisors {
+    padding: 140px 0;
+}

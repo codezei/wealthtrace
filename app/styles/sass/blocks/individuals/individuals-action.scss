@@ -1,0 +1,57 @@
+.individuals {
+    &-action {
+        color: #fff;
+        text-align: center;
+        background-color: #809D08;
+        border-radius: 16px;
+        padding: 100px 15px 90px;
+        // background-image: url(../images/dist/waves.png);
+        // background-position: center;
+        // background-size: cover;
+        position: relative;
+        z-index: 1;
+        &:before {
+            content: "";
+            display: block;
+            width: calc(100% - 60px);
+            height: calc(100% - 60px);
+            background-image: url(../images/dist/individuals-bg.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -2;
+            opacity: 0.8;
+        }
+        &__inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        &__title {
+            margin-bottom: 10px;
+        }
+        &__note {
+            font-size: 16px;
+            font-weight: 300;
+            opacity: 0.8;
+        }
+        &__subtitle {
+            margin-bottom: 3rem;
+            opacity: 0.8;
+        }
+        
+        @media screen and (max-width: 767px) {
+            &:before {
+                background-image: url(../images/dist/individuals-bg-mob.png);
+                opacity: 0.3;
+            }
+            
+        }
+        @media screen and (max-width: 575px) {
+            padding: 4rem 2rem;
+        }
+    }
+}

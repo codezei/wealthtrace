@@ -1,0 +1,40 @@
+.individuals-subscribe {
+    &__inner {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    &__form {
+        display: flex;
+        &-input {
+            width: 100%;
+        }
+        &-btn {
+            flex-shrink: 0;
+            margin-left: 10px;
+        }
+    }
+
+    @media screen and (max-width: 575px) {
+        margin-bottom: 30px;
+        &__form {
+            flex-wrap: wrap;
+            max-width: 300px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            &-input {
+                margin-bottom: 12px;
+            }
+            &-btn {
+                width: 100%;
+                margin-left: auto;
+            }
+        }
+    }
+
+}

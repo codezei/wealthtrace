@@ -1,0 +1,110 @@
+.individuals-features {
+    background-color: rgba($color: #F0F7E7, $alpha: 0.8);
+    background-image: url(../images/dist/waves-2.png);
+    background-repeat: no-repeat;
+    background-position: top -100px left -500px;
+    padding: 140px;
+    text-align: center;
+
+    @supports (filter:blur(10px)) {
+        @media screen and (min-width: 992px) {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            &:before, &:after {
+                content: "";
+                display: block;
+                width: 500px;
+                height: 500px;
+                border-radius: 50%;
+                background: #A5C426;
+                opacity: 0.3;
+                filter: blur(250px);
+                position: absolute;
+                z-index: -1;
+            }
+            &:before {
+                top: -75px;
+                left: -195px;
+            }
+            &:after {
+                bottom: -195px;
+                right: -46px;
+            }
+        }
+    }
+
+    &__title {
+
+        margin-bottom: 80px;
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
+    &__list {
+        background: #fff;
+        border-radius: 16px;
+        padding: 44px;
+        width: calc(50% - 30px);
+        list-style: none;
+        margin: 0;
+        text-align: left;
+    }
+    &__item {
+        display: flex;
+        @media screen and (min-width: 992px) {
+            line-height: 1.4;
+        }
+        &:before {
+            content: url(../images/dist/check.svg);
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+    @media screen and (max-width: 1199px) {
+        &__title {
+            margin-bottom: 60px;
+        }
+        &__row {
+            margin-bottom: 40px;
+        }
+        &__list {
+            padding: 30px;
+            width: calc(50% - 20px);
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &__title {
+            margin-bottom: 40px;
+        }
+        &__list {
+            padding: 30px;
+            width: calc(50% - 10px);
+        }
+
+    }
+    @media screen and (max-width: 767px) {
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__row {
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        &__list {
+            padding: 1.5rem;
+            width: 100%;
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        background-image: none;
+    }
+}

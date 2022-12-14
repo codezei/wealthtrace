@@ -1,0 +1,23 @@
+.advisors-promo {
+    padding: 240px 0 140px;
+    &__title {
+        margin-bottom: 1.5rem;
+        @media screen and (min-width: 992px) {
+            line-height: 1.4;
+        }
+        @media screen and (max-width: 1199px) and (min-width: 992px) {
+            font-size: 2.5rem;
+        }
+    }
+    &__row {
+        align-items: center;
+    }
+    @media screen and (max-width: 991px) {
+        &__title {
+            text-align: center;
+        }
+        &__subtitle {
+            text-align: center;
+        }
+    }
+}
