@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    transition: all 400ms;
+    // transition: all 400ms;
     z-index: 12;
     opacity: 0;
     animation-name: fadeIn;
@@ -13,10 +13,10 @@
     animation-delay: 200ms;
     transform: translateY(-100%);
     font-family: 'Montserrat';
-    &.sticky {
+    &.sticky, &.sticky .menu {
         background: #E3EFD1;
     }
-    &.active {
+    &.active, &.active .menu {
         background: #E3EFD1;
     }
     &__logo {
@@ -48,9 +48,18 @@
             align-items: center;
             font-weight: 500;
             font-size: 14px;
+            li {
+                background: inherit;
+            }   
             a {
                 padding: 1rem;
                 white-space: nowrap;
+
+            }
+            .sub-menu {
+                list-style: none;
+                padding: 0 0 0 20px ;
+                margin: 0;
             }
         }
         &-btn {
@@ -189,16 +198,60 @@
             }
         }
     }
+    @media screen and (min-width: 768px) {
+        &__navigation {
+            .menu {
+                .menu-item-has-children {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 12px;
+                        height: 12px;
+                        background-image: url(../images/dist/chevron-arrow.svg);
+                        background-size: contain;
+                        background-position: center;
+                        right: 0;
+                        top: calc(1rem + 1em/2 - 6);
+                        transform: rotate(90deg);
+                        
+                    }
+                    
+                    &:hover {
+                        &:after {
+                            transform: rotate(-90deg);
+                        }
+                    }
+                    .sub-menu {
+                        position: absolute;
+                        left: 0;
+                        top: 100%;
+                        display: none;
+                        padding: 0;
+                        background: inherit;
+                    }
+                    &:hover .sub-menu {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .menu {
     list-style: none;
     padding: 0;
     margin: 0;
-    .current-menu-item a {
+    .current-menu-item a, .current-menu-ancestor > a {
         font-weight: 600;
         opacity: 1;
     }
+
     a {
         display: inline-block;
         color: inherit;
