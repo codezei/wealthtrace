@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	toggleContent ('.tutorial__navigation-btn')
 	toggleContent ('.how-solution__navigation-btn')
 	accordion ('.accordion-item-js', {closeItem: false})
-	accordion ('.report-accordion-item-js', {closeItem: true, closeTarget: 'sample-report__item-title'})
+	// accordion ('.report-accordion-item-js', {closeItem: true, closeTarget: 'sample-report__item-title'})
 })
 
 // мобильное меню

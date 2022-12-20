@@ -31,9 +31,11 @@
     @media screen and (max-width: 991px) {
         &__promo {
             margin-bottom: 60px;
+            text-align: center;
         }
         &__title {
             text-align: center;
+            margin-bottom: 25px;
         }
         &__navigation {
             margin-bottom: 40px;
@@ -117,6 +119,7 @@
     }
     @media screen and (max-width: 991px) {
         padding: 40px;
+
         &__list {
             width: calc(50% - 15px);
         }

@@ -16,6 +16,9 @@
     &__picture {
         margin-bottom: 1.5rem;
         position: relative;
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
         &-play {
             position: absolute;
             top: 50%;
@@ -106,6 +109,9 @@
     }
     @media screen and (max-width: 991px) {
         text-align: center;
+        &__picture {
+            margin-top: 25px;
+        }
     }
 
     @media screen and (max-width: 575px) {
