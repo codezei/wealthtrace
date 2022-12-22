@@ -33,14 +33,13 @@
 
     &__navigation {
         display: flex;
-        // justify-content: space-between;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: flex-end;
         width: 100%;
-        // &-main {
-        //     margin-left: auto;
-        //     margin-right: auto;
-        // }
+        &-main {
+            margin-left: auto;
+            margin-right: auto;
+        }
         &-secondary {
             display: flex;
         }
@@ -61,7 +60,7 @@
             }
         }
         &-btn {
-            
+            padding: 1rem 1.5rem;
             &:not(:last-child) {
                 margin-right: 1.5rem;
             }
@@ -72,17 +71,18 @@
         }
     }
     @media screen and (max-width: 1399px ) and (min-width: 1199px) {
-        // &__logo {
-        //     margin-right: 50px;
-        // }
+        &__logo {
+            max-width: 270px;
+        }
         &__navigation {
             .menu {
+                font-size: 14px;
                 a {
                     padding: 0.8rem;
                 }
             }
             &-btn {
-                padding: 1rem 1.5rem;
+                padding: 1rem 1rem;
                 &:not(:last-child) {
                     margin-right: 1rem;
                 }
