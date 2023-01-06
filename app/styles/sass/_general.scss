@@ -40,7 +40,7 @@ h3 {
 }
 .btn {
     padding: 1rem 2.6rem;
-    background: #A4C31F;
+    background: #2665C4;
     border-radius: 6px;
     text-decoration: none;
     color: #fff;
@@ -48,20 +48,20 @@ h3 {
     font-weight: 500;
     transition: all 400ms;
     display: inline-block;
-    border: 1px solid #A4C31F;
+    border: 1px solid #2665C4;
     line-height: 1.1;
     @media screen and (max-width: 575px) {
         padding: 15px;
     }
 }
 .btn:hover {
-    background: #81981a;
+    background: #093577;
     color: #fff;
-    border: 1px solid #81981a;
+    border: 1px solid #093577;
 }
 
 .btn:active {
-    outline: 1px solid #6a7d15;
+    outline: 1px solid #093577;
 }
 
 .btn--inversion {
@@ -69,23 +69,23 @@ h3 {
     color: inherit;
 }
 .btn--inversion:hover, .btn--inversion.active:hover {
-    background: #81981a;
+    background: #093577;
     color: #fff;
-    border: 1px solid #81981a;
+    border: 1px solid #093577;
 }
 
 .btn--inversion.active {
-    background: #A4C31F;
-    border: 1px solid #A4C31F;
+    background: #2665C4;
+    border: 1px solid #2665C4;
     color: #fff;
 }
 .btn--white {
     background: #fff;
-    color: #819B17;
-    border: 1px solid #809D08;
+    color: #2665C4;
+    border: 1px solid #2665C4;
     &:hover {
-        background: #a4c31f;
-        border: 1px solid #a4c31f;
+        background: #5183ce;
+        border: 1px solid #5183ce;
     }
 }
 
@@ -133,7 +133,7 @@ h3 {
     }
 }
 .bg {
-    background: linear-gradient(180deg, #E3EFD1 86px, rgba(244, 244, 244, 0.38) 100%);
+    background: #DCE7F4;
 }
 .input {
     background: #FFFFFF;

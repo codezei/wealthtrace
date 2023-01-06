@@ -16,17 +16,17 @@
         top: 0;
         z-index: -2;
     }
-    &:after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: -1;
-        background: linear-gradient(180deg, #E3EFD2 0%, rgba(255, 255, 255, 0) 100%);
-    }
+    // &:after {
+    //     content: '';
+    //     display: block;
+    //     width: 100%;
+    //     height: 100%;
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     z-index: -1;
+    //     background: linear-gradient(180deg,  #DCE7F4 0%, rgba(255, 255, 255, 0) 100%);
+    // }
     &__title {
         margin-bottom: 2rem;
         text-align: center;
