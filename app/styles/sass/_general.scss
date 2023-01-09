@@ -1,3 +1,10 @@
+:root {
+    --dark-blue: #1C637F;
+    --dark-blue-darken: #054057;
+    --dark-blue-lighten: #4192b1;
+    --light-blue: #D1E4EF;
+    --light-blue-lighten: #F1F6F8;
+}
 // GENERAL PROJECT STYLES
 @media screen and (max-width: 991px) {
     html {
@@ -40,7 +47,7 @@ h3 {
 }
 .btn {
     padding: 1rem 2.6rem;
-    background: #2665C4;
+    background: var(--dark-blue);
     border-radius: 6px;
     text-decoration: none;
     color: #fff;
@@ -48,20 +55,20 @@ h3 {
     font-weight: 500;
     transition: all 400ms;
     display: inline-block;
-    border: 1px solid #2665C4;
+    border: 1px solid var(--dark-blue);
     line-height: 1.1;
     @media screen and (max-width: 575px) {
         padding: 15px;
     }
 }
 .btn:hover {
-    background: #093577;
+    background: var(--dark-blue-darken);
     color: #fff;
-    border: 1px solid #093577;
+    border: 1px solid var(--dark-blue-darken);
 }
 
 .btn:active {
-    outline: 1px solid #093577;
+    outline: 1px solid var(--dark-blue-darken);
 }
 
 .btn--inversion {
@@ -69,23 +76,23 @@ h3 {
     color: inherit;
 }
 .btn--inversion:hover, .btn--inversion.active:hover {
-    background: #093577;
+    background: var(--dark-blue-darken);
     color: #fff;
-    border: 1px solid #093577;
+    border: 1px solid var(--dark-blue-darken);
 }
 
 .btn--inversion.active {
-    background: #2665C4;
-    border: 1px solid #2665C4;
+    background: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
     color: #fff;
 }
 .btn--white {
     background: #fff;
-    color: #2665C4;
-    border: 1px solid #2665C4;
+    color: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
     &:hover {
-        background: #5183ce;
-        border: 1px solid #5183ce;
+        background: var(--dark-blue-lighten);
+        border: 1px solid var(--dark-blue-lighten);
     }
 }
 
@@ -133,7 +140,8 @@ h3 {
     }
 }
 .bg {
-    background: #DCE7F4;
+    background: var(--light-blue);
+    background: linear-gradient(180deg, var(--light-blue) 0%, rgba(244, 244, 244, 0.38) 100%);
 }
 .input {
     background: #FFFFFF;
@@ -143,6 +151,7 @@ h3 {
     font-size: 16px;
     padding: 16px;
     resize: none;
+
     @media screen and (max-width: 575px) {
         padding: 12px;
     }

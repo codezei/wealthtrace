@@ -14,10 +14,10 @@
     transform: translateY(-100%);
     font-family: 'Montserrat';
     &.sticky, &.sticky .menu {
-        background: #DCE7F4;
+        background: var(--light-blue);
     }
     &.active, &.active .menu {
-        background: #DCE7F4;
+        background: var(--light-blue);
     }
     &__logo {
         flex-shrink: 0;

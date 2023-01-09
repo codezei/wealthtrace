@@ -2,7 +2,7 @@
     &-action {
         color: #fff;
         text-align: center;
-        background-color: #2665C4;
+        background-color: var(--dark-blue);
         border-radius: 16px;
         padding: 100px 15px 90px;
         // background-image: url(../images/dist/waves.png);
@@ -24,7 +24,7 @@
             top: 50%;
             transform: translate(-50%, -50%);
             z-index: -2;
-            opacity: 0.8;
+            opacity: 0.5;
         }
         &__inner {
             max-width: 800px;
